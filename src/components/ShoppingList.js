@@ -17,7 +17,7 @@ const ShoppingList = ({ shoppingList, onRemoveFromShoppingList }) => {
         ${shoppingList.map(
           (item) => html`
             <li
-              style="display:flex ; justify-content: space-between ; padding : .8rem ; border : 1px solid #21212125 ; border-radius : .8rem ; margin-bottom: 1rem;  "
+              style="display:flex ; justify-content: space-between ; padding : .8rem ; border : 1px solid #21212125 ; border-radius : .8rem ; margin-bottom: 1rem; gap:1rem;  "
             >
               <h2>${item.strDrink}</h2>
               <button @click=${() => onRemoveHandler(item)}>Remove</button>
