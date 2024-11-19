@@ -1,9 +1,8 @@
-import { html } from "lit";
-import "./components/SearchBar.js";
-import "./components/CocktailList.js";
-import "./components/ShoppingList.js";
 import { component, useState } from "haunted";
-import { ShoppingListProvider } from "./context/ShoppingListContext.js";
+import { html } from "lit";
+import "./components/CocktailList.js";
+import "./components/SearchBar.js";
+import "./components/ShoppingList.js";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
