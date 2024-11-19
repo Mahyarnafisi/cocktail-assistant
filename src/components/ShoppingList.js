@@ -2,7 +2,7 @@ import { component } from "haunted";
 import { html } from "lit";
 
 const ShoppingList = ({ shoppingList, onRemoveFromShoppingList }) => {
-  console.log(shoppingList);
+  // remove item from shopping list
   const onRemoveHandler = (value) => {
     onRemoveFromShoppingList(value);
   };

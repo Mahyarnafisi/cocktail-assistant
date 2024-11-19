@@ -2,9 +2,11 @@ import { component } from "haunted";
 import { html } from "lit";
 
 const CocktailList = ({ results, onAddToShoppingList }) => {
+  // add item to shopping list
   const onAddHandler = (value) => {
     onAddToShoppingList(value);
   };
+
   if (results.length === 0) {
     return html` <div style="padding : 1.6rem;">
       <h2>no resualt</h2>

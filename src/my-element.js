@@ -9,6 +9,7 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [shoppingList, setShoppingList] = useState([]);
 
+  // fetching data from data base
   const fetchCocktails = async (query) => {
     setIsLoading(true);
     if (!query) {
@@ -26,10 +27,12 @@ function App() {
     }
   };
 
+  // add item to shopping list
   const onAddToShoppingList = (item) => {
     setShoppingList([...shoppingList, item]);
   };
 
+  // remove item from shopping list
   const onRemoveFromShoppingList = (value) => {
     setShoppingList(shoppingList.filter((item) => item !== value));
   };

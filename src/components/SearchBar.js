@@ -11,6 +11,7 @@ function SearchBar({ onSearch, isLoading }) {
     }
   };
 
+  // search for the query
   const searchHandler = () => {
     if (!query) {
       alert("Please enter a search term");
