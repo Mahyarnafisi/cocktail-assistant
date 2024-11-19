@@ -18,13 +18,15 @@ const CocktailList = ({ results, onAddToShoppingList }) => {
         <h2>number of result : ${results.length}</h2>
       </div>
       <div>
-        <ul style=" display:flex ; flex-direction :column ; gap: .8rem ;justify-content: center; ">
+        <ul style=" display:flex ; flex-direction :column ; gap: .8rem ;justify-content: flex-start; ">
           ${results.map(
             (cocktail) => html`
-              <li style="width: 100% ; display : flex ; padding : .8rem ; border : 1px solid ; justify-content: space-between;  ">
-                <h2 style="">${cocktail.strDrink}</h2>
-                <img src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}" style="width:128px ; border-radius: 1.6rem ; " />
-                <p style="padding: .8rem ;">${cocktail.strInstructions}</p>
+              <li
+                style="width: 100% ; display : flex ; padding : .8rem ; border : 1px solid #21212150 ; justify-content: space-between; border-radius : .8rem ;  background-color:white  "
+              >
+                <h2 style="width : 8rem ;  text-wrap: nowrap;">${cocktail.strDrink}</h2>
+                <img src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}" style="width:12.8rem ; border-radius: 1.6rem ; " />
+                <p style="padding: .8rem ; width : 50% ;">${cocktail.strInstructions}</p>
                 <button @click=${() => onAddHandler(cocktail)}>Add</button>
               </li>
             `
